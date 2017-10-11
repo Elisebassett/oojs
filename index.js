@@ -104,11 +104,15 @@ class Library {
 			}	 
 		}
 	}
-	burnBook(){
-		
+	burnBook(burn){
+		for (var i = 0; i < this.books.length; i++) {
+			if (this.books[i].title === burn) {
+				 this.books.splice(i,1);
+			}	 
+		}
 	}
 	countBooks(){
-
+		return this.books.length;
 	}
 }
 
@@ -131,7 +135,7 @@ var potter_five = new Book('Harry Potter and the Order of the Pheonix', 'JK Rowl
 var potter_six = new Book('Harry Potter and the Half-Blood Prince', 'JK Rowling', 'fantasy');
 var potter_seven = new Book('Harry Potter and the Deathly Hallows', 'JK Rowling', 'fantasy');
 var wells = new Book('Time Machine', 'HG Wells', 'Sifi');
-var aziz = new Book('Modern Love', 'Aziz Anzari', 'Non Fiction');
+var aziz = new Book('Modern Romance', 'Aziz Anzari', 'Non Fiction');
 var alchemist = new Book('The Alchemist', 'Paulo Cohelo', 'Fiction');
 
 ////Add Books////
@@ -149,10 +153,11 @@ strand.addBook(alchemist);
 console.log(strand.books);
 
 ////Pull Book////
-console.log(strand.pullBook('Modern Love'));
+console.log(strand.pullBook('Modern Romance'));
 
 ////Burn Book////
-console.log(strand.burnBook());
+strand.burnBook('Time Machine');
+console.log(strand.books);
 
 ////Count Books/////
 console.log(strand.countBooks());

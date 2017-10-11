@@ -46,7 +46,6 @@ class Album {
 		var p = p;
 		return this.photos[p];
 	}
-
 }
 
 class Photo {
@@ -55,11 +54,6 @@ class Photo {
 		this.location = location;
 	}
 }
-
-
-
-
-
 
 
 // Instances
@@ -92,17 +86,85 @@ console.log(europe.listPhoto());
 console.log(europe.pullPhoto(5));
 
 
-// var person_array = [
-// {first_name: 'Elise', last_name:' Bassett'}, 
-// {first_name:'Laven', last_name:' Marrow'}, 
-// {first_name:'Ryan', last_name:' Richardson'}, 
-// {first_name:'Linsdey',last_name:' Johnson'}, 
-// {first_name:'Christi', last_name:' Barker'}, 
-// {first_name:'Jonah', last_name:' Thompson'}, 
-// {first_name:'Rolf', last_name:' Woolen'}
-// ];
+////////////////////////////Third Task///////////////////////////////////////////////
 
-// for (var i = 0; i < person_array.length; i++) {
-// 	console.log(person_array[i].first_name + person_array[i].last_name);
-// }
+
+class Library {
+	constructor(books){
+		this.books = [];
+
+	}
+	addBook(book){
+		this.books.push(book);
+	}
+	pullBook(){
+
+	}
+	burnBook(){
+
+	}
+	countBooks(){
+
+	}
+}
+
+class Book{
+	constructor(title,author,genre){
+		this.title = title;
+		this.author = author;
+		this.genre = genre
+	}
+}
+
+////Instances////
+var strand = new Library();
+
+var potter_one = new Book('Harry Potter and the Sorcerers Stone', 'JK Rowling', 'fantasy');
+var potter_two = new Book('Harry Potter and the Chamber of Secrets', 'JK Rowling', 'fantasy');
+var potter_three = new Book('Harry Potter and the Prisoner of Azkaban', 'JK Rowling', 'fantasy');
+var potter_four = new Book('Harry Potter and the Goblet of Fire ', 'JK Rowling', 'fantasy');
+var potter_five = new Book('Harry Potter and the Order of the Pheonix', 'JK Rowling', 'fantasy');
+var potter_six = new Book('Harry Potter and the Half-Blood Prince', 'JK Rowling', 'fantasy');
+var potter_seven = new Book('Harry Potter and the Deathly Hallows', 'JK Rowling', 'fantasy');
+var wells = new Book('Time Machine', 'HG Wells', 'Sifi');
+var aziz = new Book('Modern Love', 'Aziz Anzari', 'Non Fiction');
+var alchemist = new Book('The Alchemist', 'Paulo Cohelo', 'Fiction');
+
+////Add Books////
+console.log(strand.books);
+strand.addBook(potter_one);
+strand.addBook(potter_two);
+strand.addBook(potter_three);
+strand.addBook(potter_four);
+strand.addBook(potter_five);
+strand.addBook(potter_six);
+strand.addBook(potter_seven);
+strand.addBook(wells);
+strand.addBook(aziz);
+strand.addBook(alchemist);
+console.log(strand.books);
+
+////Pull Book////
+console.log(strand.pullBook());
+
+////Burn Book////
+console.log(strand.burnBook());
+
+////Count Books/////
+console.log(strand.countBooks());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

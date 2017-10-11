@@ -163,6 +163,47 @@ console.log(strand.books);
 console.log(strand.countBooks());
 
 
+////////////////////////////Intermediate///////////////////////////////////////////////
+
+////Date////
+var today = new Date();
+
+console.log(today);
+
+Date.prototype.formattedDate = function(){
+	const months = ["January", "February","March","April","May", "June","July", "August", "September", "October", "November", "December"];
+	return `${months[this.getMonth()]} ${this.getDate()}, ${this.getFullYear()}`
+}
+
+console.log(today.formattedDate());
+
+////Time////
+Date.prototype.getTime = function(){
+	var time = new Date();
+	var h = time.getHours();
+	var m = time.getMinutes();
+	var s = time.getSeconds();
+
+	if (h.length < 2) {
+		h = "0" + h;
+	}
+	if (m.length < 2) {
+		m = "0" + m;
+	}
+	if (s.length < 2) {
+		s = "0" + s;
+	}
+	return `${h}:${m}:${s}`
+}
+
+console.log(today.getTime());
+
+
+
+
+
+
+
 
 
 

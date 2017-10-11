@@ -97,11 +97,15 @@ class Library {
 	addBook(book){
 		this.books.push(book);
 	}
-	pullBook(){
-
+	pullBook(search){
+		for (var i = 0; i < this.books.length; i++) {
+			if (this.books[i].title === search) {
+				return this.books[i];
+			}	 
+		}
 	}
 	burnBook(){
-
+		
 	}
 	countBooks(){
 
@@ -145,7 +149,7 @@ strand.addBook(alchemist);
 console.log(strand.books);
 
 ////Pull Book////
-console.log(strand.pullBook());
+console.log(strand.pullBook('Modern Love'));
 
 ////Burn Book////
 console.log(strand.burnBook());

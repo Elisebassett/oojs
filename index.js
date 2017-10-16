@@ -43,7 +43,6 @@ class Album {
 	}
 
 	pullPhoto(p){
-		var p = p;
 		return this.photos[p];
 	}
 }
@@ -197,6 +196,21 @@ Date.prototype.getTime = function(){
 }
 
 console.log(today.getTime());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
